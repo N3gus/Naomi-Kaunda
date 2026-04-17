@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naomi Kaunda - Junior Sales Professional</title>
+    <title>Naomi Kaunda - Sales Representative | Bravo Technology (Z) Ltd</title>
     <style>
         * {
             margin: 0;
@@ -74,34 +74,59 @@
             color: var(--primary-color);
         }
 
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
         /* Hero Section */
         .hero {
+            text-align: center;
             padding: 4rem 0;
             background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.2;
         }
 
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: center;
-            min-height: 500px;
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .hero .company-link {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero .company-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hero .company-link a:hover {
+            color: var(--primary-dark);
         }
 
         .hero-photo {
-            text-align: center;
+            margin: 2rem 0;
         }
 
         .photo-frame {
-            width: 280px;
-            height: 280px;
-            border-radius: 20px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 196, 180, 0.2);
             border: 4px solid var(--primary-color);
@@ -114,256 +139,149 @@
             object-fit: cover;
         }
 
-        .hero-text h1 {
-            font-size: 3rem;
+        /* About Section */
+        .about {
+            padding: 3rem 0;
+        }
+
+        .about h2 {
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-            line-height: 1.2;
-        }
-
-        .hero-text .subtitle {
-            font-size: 1.5rem;
-            color: var(--primary-color);
             margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        .hero-text .bio {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            padding: 1.5rem;
-            background: var(--bg-white);
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-color);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .contact-info span {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 500;
-        }
-
-        .contact-info a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: var(--primary-dark);
-        }
-
-        /* Experience Section */
-        .experience {
-            padding: 4rem 0;
-            background: var(--bg-white);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
             color: var(--text-dark);
             position: relative;
         }
 
-        .section-title::after {
+        .about h2::after {
             content: '';
             position: absolute;
             bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
             width: 60px;
             height: 4px;
             background: var(--primary-color);
             border-radius: 2px;
         }
 
-        .experience-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .work-experience {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 12px;
-            border-top: 4px solid var(--primary-color);
-        }
-
-        .work-experience h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
-        .work-experience .company {
-            color: var(--primary-color);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .work-experience .date {
+        .about-content {
+            font-size: 1.1rem;
             color: var(--text-light);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .work-experience ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .work-experience li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-light);
-        }
-
-        .work-experience li::before {
-            content: '>';
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
+            line-height: 1.8;
+            margin-bottom: 2rem;
         }
 
         /* Skills Section */
-        .skills-section {
-            background: var(--bg-white);
+        .skills {
+            padding: 3rem 0;
+            background: var(--bg-light);
+        }
+
+        .skills h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .skills-description {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .skill-tag {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            padding: 0.8rem 1.2rem;
-            border-radius: 25px;
-            text-align: center;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .skill-tag:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 196, 180, 0.3);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
-        }
-
-        .contact-content {
-            display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
         }
 
-        .contact-options {
+        .skill-category {
             background: var(--bg-white);
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
 
-        .contact-options h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-dark);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background: var(--bg-light);
-            border-radius: 8px;
-            transition: background 0.3s ease;
-        }
-
-        .contact-item:hover {
-            background: #E8F8F7;
-        }
-
-        .contact-item a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .referrals {
-            background: var(--bg-white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .referrals h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-dark);
-        }
-
-        .referral-item {
-            padding: 1rem;
-            background: var(--bg-light);
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-
-        .referral-item .name {
+        .skill-category h3 {
+            font-size: 1.3rem;
             font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+
+        .skill-item:last-child {
+            border-bottom: none;
+        }
+
+        .skill-item:hover {
+            color: var(--primary-color);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 3rem 0;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
             color: var(--text-dark);
         }
 
-        .referral-item .title {
-            color: var(--primary-color);
-            font-size: 0.9rem;
-        }
-
-        .referral-item .phone {
+        .contact-description {
             color: var(--text-light);
-            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
 
+        .contact-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Additional Info */
         .additional-info {
             grid-column: 1 / -1;
-            background: var(--bg-white);
+            background: var(--bg-light);
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             margin-top: 2rem;
         }
 
         .additional-info h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 1.5rem;
             color: var(--text-dark);
         }
@@ -385,6 +303,24 @@
             line-height: 1.8;
         }
 
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background: var(--bg-light);
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--primary-dark);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -392,42 +328,32 @@
                 font-size: 0.9rem;
             }
 
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
-            }
-
-            .hero-text h1 {
+            .hero h1 {
                 font-size: 2rem;
             }
 
-            .hero-text .subtitle {
+            .hero .subtitle {
                 font-size: 1.2rem;
             }
 
-            .experience-grid {
+            .skills-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+            .contact-links {
+                flex-direction: column;
+                gap: 1rem;
             }
 
             .info-grid {
                 grid-template-columns: 1fr;
             }
-
-            .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            }
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 0 1rem;
+            main {
+                padding: 1rem;
             }
 
             .hero {
@@ -435,16 +361,12 @@
             }
 
             .photo-frame {
-                width: 200px;
-                height: 200px;
+                width: 150px;
+                height: 150px;
             }
 
-            .hero-text h1 {
+            .hero h1 {
                 font-size: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
             }
         }
     </style>
@@ -456,147 +378,105 @@
             <div class="nav-logo">Naomi Kaunda</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="about" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-photo">
-                    <div class="photo-frame">
-                        <img src="https://kurotsuki.notion.site/image/attachment%3A73bc9a3c-07f2-4992-9cf7-93d6883e5077%3AWhatsApp_Image_2026-04-11_at_13.36.09.jpeg?table=block&id=3454b4a1-df3a-8011-b7d9-fffe7b253339&spaceId=ca87fe6c-0522-4ef9-8be1-a6769345ef0e&width=660&userId=&cache=v2" alt="Naomi Kaunda">
-                    </div>
-                </div>
-                <div class="hero-text">
-                    <h1>Naomi Kaunda</h1>
-                    <div class="subtitle">Junior Sales Professional</div>
-                    <p class="bio">
-                        Passionate and results-driven junior sales professional with hands-on experience in customer engagement, lead generation, sales support, and marketing promotions. Proven ability to deliver excellent customer experiences and drive sales growth in both retail (automotive) and technology environments. Seeking to leverage strong communication skills and customer-focused approach in tech sales and business development roles.
-                    </p>
-                    <div class="contact-info">
-                        <span>Kitwe, Zambia</span>
-                        <span><a href="tel:+260766680694">+260 76 6680694</a></span>
-                        <span><a href="mailto:naomikaunda28@icloud.com">naomikaunda28@icloud.com</a></span>
-                    </div>
-                </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="hero">
+            <h1>Naomi Kaunda</h1>
+            <div class="subtitle">Sales Representative | Technology Solutions Specialist</div>
+            <div class="company-link">
+                Representing <a href="https://www.bravotechafrica.com" target="_blank" rel="noopener">Bravo Technology (Z) Ltd</a> | Driving Digital Transformation in Africa
             </div>
-        </div>
-    </section>
-
-    <!-- Experience & Skills Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Experience & Skills</h2>
             
-            <div class="experience-grid">
-                <div class="work-experience">
-                    <h3>Sales & Marketing Intern</h3>
-                    <div class="company">Toyota Zambia</div>
-                    <div class="date">January 2024 - March 2024</div>
-                    <ul>
-                        <li>Assisted in developing and implementing marketing campaigns for new vehicle launches</li>
-                        <li>Supported lead generation activities through customer outreach and follow-up</li>
-                        <li>Contributed to sales team with customer qualification and appointment scheduling</li>
-                        <li>Helped maintain customer relationships and provided post-sales support</li>
-                    </ul>
-                </div>
-
-                <div class="work-experience">
-                    <h3>Sales Support Intern</h3>
-                    <div class="company">Airtel Zambia</div>
-                    <div class="date">June 2023 - August 2023</div>
-                    <ul>
-                        <li>Provided administrative support to the sales team and management</li>
-                        <li>Assisted in preparing sales reports and tracking customer data</li>
-                        <li>Supported customer service operations and handled inquiries</li>
-                        <li>Participated in team meetings and contributed to sales strategy discussions</li>
-                    </ul>
-                </div>
-
-                <div class="work-experience">
-                    <h3>Customer Service Intern</h3>
-                    <div class="company">Shoprite Zambia</div>
-                    <div class="date">December 2022 - February 2023</div>
-                    <ul>
-                        <li>Delivered excellent customer service and resolved customer issues</li>
-                        <li>Assisted with product inquiries and provided product information</li>
-                        <li>Supported inventory management and stock replenishment activities</li>
-                        <li>Contributed to promotional campaigns and customer engagement initiatives</li>
-                    </ul>
+            <div class="hero-photo">
+                <div class="photo-frame">
+                    <img src="https://kurotsuki.notion.site/image/attachment%3A73bc9a3c-07f2-4992-9cf7-93d6883e5077%3AWhatsApp_Image_2026-04-11_at_13.36.09.jpeg?table=block&id=3454b4a1-df3a-8011-b7d9-fffe7b253339&spaceId=ca87fe6c-0522-4ef9-8be1-a6769345ef0e&width=660&userId=&cache=v2" alt="Naomi Kaunda">
                 </div>
             </div>
+        </section>
 
-            <div class="skills-section">
-                <h3 style="text-align: center; margin-bottom: 1rem; color: var(--text-dark);">Core Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-tag">Customer Acquisition</div>
-                    <div class="skill-tag">Lead Generation</div>
-                    <div class="skill-tag">Sales Conversion</div>
-                    <div class="skill-tag">Customer Service</div>
-                    <div class="skill-tag">Communication</div>
-                    <div class="skill-tag">Marketing Campaigns</div>
-                    <div class="skill-tag">CRM (Zoho)</div>
-                    <div class="skill-tag">Microsoft Excel</div>
-                </div>
+        <!-- About Section -->
+        <section class="about">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>As a Sales Representative at Bravo Technology (Z) Ltd, I specialize in delivering cutting-edge technology solutions that bridge innovative capabilities with strategic business outcomes. My expertise spans customer relationship management, lead generation, and sales conversion, enabling me to design scalable solutions that drive measurable ROI.</p>
+                <p>I excel at translating technical specifications into compelling value propositions for business stakeholders and customers alike. At BravoTech, we're pioneering the future of enterprise technology across Africa, delivering world-class solutions that empower organizations to thrive in the digital economy.</p>
+                <p>My passion lies in understanding customer needs and providing tailored technology solutions that enhance business operations and drive growth. With a strong foundation in sales methodologies and customer engagement, I consistently deliver exceptional results while building lasting client relationships.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact & Additional Information</h2>
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2>Expertise & Skills</h2>
+            <div class="skills-description">
+                A balanced toolkit designed for the modern sales cycle, combining deep technical fluency with commercial intuition.
+            </div>
             
-            <div class="contact-content">
-                <div class="contact-options">
-                    <h3>Get in Touch</h3>
-                    <div class="contact-item">
-                        <a href="mailto:naomikaunda28@icloud.com">naomikaunda28@icloud.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="tel:+260766680694">+260 76 6680694</a>
-                    </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Sales Foundation</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Customer Acquisition</li>
+                        <li class="skill-item">Lead Generation</li>
+                        <li class="skill-item">Sales Conversion</li>
+                        <li class="skill-item">Customer Service Excellence</li>
+                        <li class="skill-item">Relationship Building</li>
+                        <li class="skill-item">Sales Pipeline Management</li>
+                    </ul>
                 </div>
 
-                <div class="referrals">
-                    <h3>Professional Referrals</h3>
-                    <div class="referral-item">
-                        <div class="name">Chanda Bwalya</div>
-                        <div class="title">Sales Manager, Toyota Zambia</div>
-                        <div class="phone">+260 97 1234567</div>
-                    </div>
-                    <div class="referral-item">
-                        <div class="name">Grace Mwila</div>
-                        <div class="title">Business Development Manager, Airtel Zambia</div>
-                        <div class="phone">+260 96 2345678</div>
-                    </div>
-                    <div class="referral-item">
-                        <div class="name">James Phiri</div>
-                        <div class="title">Operations Supervisor, Shoprite Zambia</div>
-                        <div class="phone">+260 95 3456789</div>
-                    </div>
+                <div class="skill-category">
+                    <h3>Technical & Business Skills</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">CRM (Zoho)</li>
+                        <li class="skill-item">Microsoft Excel</li>
+                        <li class="skill-item">Marketing Campaigns</li>
+                        <li class="skill-item">Communication</li>
+                        <li class="skill-item">Business Acumen</li>
+                        <li class="skill-item">Product Demonstrations</li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="additional-info">
-                    <h3>Additional Information</h3>
-                    <div class="info-grid">
-                        <div class="info-section">
-                            <h4>Interests</h4>
-                            <p>Reading, Travelling, Cooking, Public Engagement</p>
-                        </div>
-                        <div class="info-section">
-                            <h4>Strengths</h4>
-                            <p>Team-oriented, adaptable, customer-focused</p>
-                        </div>
+            <div class="additional-info">
+                <h3>Additional Information</h3>
+                <div class="info-grid">
+                    <div class="info-section">
+                        <h4>Interests</h4>
+                        <p>Reading, Travelling, Cooking, Public Engagement</p>
+                    </div>
+                    <div class="info-section">
+                        <h4>Strengths</h4>
+                        <p>Team-oriented, adaptable, customer-focused</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Connect & Collaborate</h2>
+            <div class="contact-description">
+                Let's discuss how technology solutions can transform your business operations and drive growth.
+            </div>
+            <div class="contact-links">
+                <a href="mailto:naomikaunda28@icloud.com" class="contact-link">Email</a>
+                <a href="tel:+260766680694" class="contact-link">Phone</a>
+                <a href="https://www.bravotechafrica.com" target="_blank" rel="noopener" class="contact-link">BravoTech</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <a href="https://n3gus.github.io/Sales_Engineer" target="_blank" rel="noopener">Mweetwa Mweembo Nketani</a></p>
+    </footer>
 
     <script>
         // Smooth scrolling for navigation links
