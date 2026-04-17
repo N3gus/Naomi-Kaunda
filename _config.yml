@@ -1,0 +1,46 @@
+# Site settings
+title: "Naomi Kaunda - Sales Representative"
+description: "Sales Representative at Bravo Technology (Z) Ltd, specializing in technology solutions and digital transformation across Africa."
+url: "https://n3gus.github.io/Naomi-Kaunda"
+baseurl: "/Naomi-Kaunda"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# SEO
+author: "Naomi Kaunda"
+lang: en
+timezone: Africa/Lusaka
