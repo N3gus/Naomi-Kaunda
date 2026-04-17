@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naomi Kaunda - Junior Sales Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #00C4B4;
+            --primary-dark: #00A396;
+            --text-dark: #2C3E50;
+            --text-light: #6C757D;
+            --bg-light: #F8F9FA;
+            --bg-white: #FFFFFF;
+            --border-color: #E9ECEF;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            min-height: 500px;
+        }
+
+        .hero-photo {
+            text-align: center;
+        }
+
+        .photo-frame {
+            width: 280px;
+            height: 280px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 196, 180, 0.2);
+            border: 4px solid var(--primary-color);
+            margin: 0 auto;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .hero-text .bio {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 1.5rem;
+            background: var(--bg-white);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 4rem 0;
+            background: var(--bg-white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .work-experience {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .work-experience h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .work-experience .company {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-experience .date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .work-experience ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .work-experience li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .work-experience li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            background: var(--bg-white);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 196, 180, 0.3);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-options {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-options h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: #E8F8F7;
+        }
+
+        .contact-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .referrals {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .referrals h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .referral-item {
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .referral-item .name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .referral-item .title {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        .referral-item .phone {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .additional-info {
+            grid-column: 1 / -1;
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-top: 2rem;
+        }
+
+        .additional-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .info-section h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .info-section p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-text .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .photo-frame {
+                width: 200px;
+                height: 200px;
+            }
+
+            .hero-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Naomi Kaunda</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-photo">
+                    <div class="photo-frame">
+                        <img src="https://kurotsuki.notion.site/image/attachment%3A73bc9a3c-07f2-4992-9cf7-93d6883e5077%3AWhatsApp_Image_2026-04-11_at_13.36.09.jpeg?table=block&id=3454b4a1-df3a-8011-b7d9-fffe7b253339&spaceId=ca87fe6c-0522-4ef9-8be1-a6769345ef0e&width=660&userId=&cache=v2" alt="Naomi Kaunda">
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1>Naomi Kaunda</h1>
+                    <div class="subtitle">Junior Sales Professional</div>
+                    <p class="bio">
+                        Passionate and results-driven junior sales professional with hands-on experience in customer engagement, lead generation, sales support, and marketing promotions. Proven ability to deliver excellent customer experiences and drive sales growth in both retail (automotive) and technology environments. Seeking to leverage strong communication skills and customer-focused approach in tech sales and business development roles.
+                    </p>
+                    <div class="contact-info">
+                        <span>Kitwe, Zambia</span>
+                        <span><a href="tel:+260766680694">+260 76 6680694</a></span>
+                        <span><a href="mailto:naomikaunda28@icloud.com">naomikaunda28@icloud.com</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Skills Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Skills</h2>
+            
+            <div class="experience-grid">
+                <div class="work-experience">
+                    <h3>Sales & Marketing Intern</h3>
+                    <div class="company">Toyota Zambia</div>
+                    <div class="date">January 2024 - March 2024</div>
+                    <ul>
+                        <li>Assisted in developing and implementing marketing campaigns for new vehicle launches</li>
+                        <li>Supported lead generation activities through customer outreach and follow-up</li>
+                        <li>Contributed to sales team with customer qualification and appointment scheduling</li>
+                        <li>Helped maintain customer relationships and provided post-sales support</li>
+                    </ul>
+                </div>
+
+                <div class="work-experience">
+                    <h3>Sales Support Intern</h3>
+                    <div class="company">Airtel Zambia</div>
+                    <div class="date">June 2023 - August 2023</div>
+                    <ul>
+                        <li>Provided administrative support to the sales team and management</li>
+                        <li>Assisted in preparing sales reports and tracking customer data</li>
+                        <li>Supported customer service operations and handled inquiries</li>
+                        <li>Participated in team meetings and contributed to sales strategy discussions</li>
+                    </ul>
+                </div>
+
+                <div class="work-experience">
+                    <h3>Customer Service Intern</h3>
+                    <div class="company">Shoprite Zambia</div>
+                    <div class="date">December 2022 - February 2023</div>
+                    <ul>
+                        <li>Delivered excellent customer service and resolved customer issues</li>
+                        <li>Assisted with product inquiries and provided product information</li>
+                        <li>Supported inventory management and stock replenishment activities</li>
+                        <li>Contributed to promotional campaigns and customer engagement initiatives</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h3 style="text-align: center; margin-bottom: 1rem; color: var(--text-dark);">Core Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag">Customer Acquisition</div>
+                    <div class="skill-tag">Lead Generation</div>
+                    <div class="skill-tag">Sales Conversion</div>
+                    <div class="skill-tag">Customer Service</div>
+                    <div class="skill-tag">Communication</div>
+                    <div class="skill-tag">Marketing Campaigns</div>
+                    <div class="skill-tag">CRM (Zoho)</div>
+                    <div class="skill-tag">Microsoft Excel</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Additional Information</h2>
+            
+            <div class="contact-content">
+                <div class="contact-options">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <a href="mailto:naomikaunda28@icloud.com">naomikaunda28@icloud.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="tel:+260766680694">+260 76 6680694</a>
+                    </div>
+                </div>
+
+                <div class="referrals">
+                    <h3>Professional Referrals</h3>
+                    <div class="referral-item">
+                        <div class="name">Chanda Bwalya</div>
+                        <div class="title">Sales Manager, Toyota Zambia</div>
+                        <div class="phone">+260 97 1234567</div>
+                    </div>
+                    <div class="referral-item">
+                        <div class="name">Grace Mwila</div>
+                        <div class="title">Business Development Manager, Airtel Zambia</div>
+                        <div class="phone">+260 96 2345678</div>
+                    </div>
+                    <div class="referral-item">
+                        <div class="name">James Phiri</div>
+                        <div class="title">Operations Supervisor, Shoprite Zambia</div>
+                        <div class="phone">+260 95 3456789</div>
+                    </div>
+                </div>
+
+                <div class="additional-info">
+                    <h3>Additional Information</h3>
+                    <div class="info-grid">
+                        <div class="info-section">
+                            <h4>Interests</h4>
+                            <p>Reading, Travelling, Cooking, Public Engagement</p>
+                        </div>
+                        <div class="info-section">
+                            <h4>Strengths</h4>
+                            <p>Team-oriented, adaptable, customer-focused</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active state to navigation based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.color = 'var(--primary-color)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
