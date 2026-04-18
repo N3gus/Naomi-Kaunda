@@ -78,14 +78,22 @@ description: "Sales Representative at Bravo Technology (Z) Ltd, specializing in 
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="contact">
-    <h2>Connect & Collaborate</h2>
+<section id="contact" class="contact section">
+    <div class="section-header">
+        <h2 class="section-title">Connect & Collaborate</h2>
+    </div>
     <div class="contact-description">
         Let's discuss how technology solutions can transform your business operations and drive growth.
     </div>
     <div class="contact-links">
-        <a href="mailto:naomikaunda28@icloud.com" class="contact-link">Email</a>
-        <a href="tel:+260766680694" class="contact-link">Phone</a>
-        <a href="https://www.bravotechafrica.com" target="_blank" rel="noopener" class="contact-link">BravoTech</a>
+        <a href="mailto:naomikaunda28@icloud.com" class="btn">
+            <span>📧</span> Email Me
+        </a>
+        <a href="tel:+260766680694" class="btn">
+            <span>📱</span> Call Me
+        </a>
+        <a href="https://www.bravotechafrica.com" target="_blank" rel="noopener" class="btn">
+            <span>🌐</span> Visit BravoTech
+        </a>
     </div>
 </section>
