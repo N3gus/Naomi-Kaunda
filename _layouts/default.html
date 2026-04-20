@@ -22,6 +22,11 @@
     <!-- Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="reading-progress" aria-hidden="true">
+        <div class="reading-progress__bar" id="reading-progress-bar"></div>
+    </div>
+
     <!-- Navigation -->
     <header class="nav" role="banner">
         <div class="nav__container">
@@ -75,6 +80,13 @@
             <p class="footer__text">© 2026 <a href="https://n3gus.github.io/Mweetwa-Nketani" class="footer__link" target="_blank" rel="noopener noreferrer">Mweetwa Mweembo Nketani</a></p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
 
     <script>
         // Mobile Menu Functionality
@@ -166,6 +178,72 @@
 
             window.addEventListener('scroll', highlightNavLink);
             highlightNavLink(); // Initial check
+        })();
+
+        // Reading Progress Bar
+        (function() {
+            const progressBar = document.getElementById('reading-progress');
+            const progressBarInner = document.getElementById('reading-progress-bar');
+
+            function updateProgress() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (scrollTop / docHeight) * 100;
+
+                progressBarInner.style.width = progress + '%';
+
+                // Show progress bar after scrolling down a bit
+                if (scrollTop > 100) {
+                    progressBar.classList.add('visible');
+                } else {
+                    progressBar.classList.remove('visible');
+                }
+            }
+
+            window.addEventListener('scroll', updateProgress);
+            updateProgress(); // Initial check
+        })();
+
+        // Back to Top Button
+        (function() {
+            const backToTop = document.getElementById('back-to-top');
+
+            function toggleBackToTop() {
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            }
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            window.addEventListener('scroll', toggleBackToTop);
+            toggleBackToTop(); // Initial check
+        })();
+
+        // Scroll Reveal Animation
+        (function() {
+            const revealElements = document.querySelectorAll('.reveal');
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
         })();
     </script>
 </body>
